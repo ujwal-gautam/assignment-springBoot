@@ -16,9 +16,6 @@ public class Salary {
     @Column(name = "empId")
     private Integer emoId;
 
-    @Column(name = "salary")
+    @Column(name = "salaryAmount")
     private Integer salary;
-
-    @Column(name = "amount")
-    private Integer amount;
 }

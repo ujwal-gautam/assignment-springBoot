@@ -14,8 +14,8 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     @Query(value = "select e.id as id, e.name as name, e.address as address, e.mobile_number as phoneNumber" +
-            " ,e.email as email, s.empSalary as empSalary from employee e inner join salary s on s.empId=e.id", countQuery = "select e.id as id, e.name as name, e.address as address, e.mobile_number as phoneNumber" +
-            " ,e.email as email, s.empSalary as empSalary from employee e inner join salary s on s.empId=e.id", nativeQuery = true)
+            " ,e.email as email, s.salaryAmount as empSalary from employee e inner join salary s on s.empId=e.id", countQuery = "select e.id as id, e.name as name, e.address as address, e.mobile_number as phoneNumber" +
+            " ,e.email as email, s.salaryAmount as empSalary from employee e inner join salary s on s.empId=e.id", nativeQuery = true)
     Page<EmployeeDTO> employeeList(Pageable sortedByIdDesc);
 
 
